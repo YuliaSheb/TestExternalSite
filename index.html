@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h1>Lightning Out Test10</h1>
+        <h1>Lightning Out Test11</h1>
         <script type="text/javascript" async="" src="https://orgfarm-1e1196e1db-dev-ed.develop.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js"></script>
         <script>
-            // Get frontdoor URL from UI Bridge API
-            // This assumes you have a valid Salesforce session
-            async function initLightningOut() {
-                
-                const lightningOutApp = document.createElement('lightning-out-application');
-                lightningOutApp.setAttribute('app-id', '1Usg50000000DQHCA2');
-                lightningOutApp.setAttribute('components', 'c-simple-test-lightning-out');
-                
-                lightningOutApp.addEventListener('lo.application.ready', () => {
-                    console.log('Salesforce session established');
-                });
-                
-                lightningOutApp.addEventListener('lo.application.error', (e) => {
-                    console.error('Authentication failed:', e.detail.message);
-                });
-                
-                document.getElementById('app-container').appendChild(lightningOutApp);
-            }
+            const app = document.createElement('lightning-out-application');
+            app.setAttribute('app-id', '1Usg50000000DQHCA2');
+            app.setAttribute('components', 'c-simple-test-lightning-out');
 
-            initLightningOut();
+            const reportExport = document.createElement('c-simple-test-lightning-out');
+
+            app.appendChild(reportExport);
         </script>
     </body>
 </html>
