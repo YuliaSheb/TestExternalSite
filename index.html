@@ -1,25 +1,8 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h1>Lightning Out Test7</h1>
+        <h1>Lightning Out Test8</h1>
         <script type="text/javascript" async="" src="https://orgfarm-1e1196e1db-dev-ed.develop.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js"></script>
-        <script>
-            window.addEventListener('lo.application.error', function(event) {
-                console.error('LO APPLICATION ERROR:', event.detail);
-            });
-
-            window.addEventListener('lo.application.ready', function(event) {
-                console.log('LO APPLICATION READY:', event);
-            });
-
-            window.addEventListener('lo.component.error', function(event) {
-                console.error('LO COMPONENT ERROR:', event.detail);
-            });
-
-            window.addEventListener('lo.component.ready', function(event) {
-                console.log('LO COMPONENT READY:', event);
-            });
-        </script>
         <lightning-out-application app-id="1Usg50000000DQHCA2" components="c-simple-test-lightning-out"></lightning-out-application>
         <c-simple-test-lightning-out></c-simple-test-lightning-out>
     </body>
